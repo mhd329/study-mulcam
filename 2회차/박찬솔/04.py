@@ -3,7 +3,7 @@ from pprint import pprint
 
 
 def movie_info(movie):
-    pass 
+    print(movie) 
     # 여기에 코드를 작성합니다.    
 
 
