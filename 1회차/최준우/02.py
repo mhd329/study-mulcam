@@ -4,10 +4,9 @@ with open('data/fruits.txt', 'r', encoding='utf-8') as f:
     my_list = text.split('\n')
     berries = {}
     cnt = 0
-    
+
     for i in my_list:
         if i.endswith('berry'):
-
             if i in berries:
                 berries[i] += 1
             else:

@@ -13,12 +13,11 @@ Plumcot 8
 Soursop 1
 Grapefruit 1
 Apricot 3
-Juniper 5
-berry 11
+Juniper berry 5
 Feijoa 8
 Blackcurrant 4
 Cantaloupe 6
-Salal 4
+Salal berry 4
 Fig 4
 Papaya 5
 Elderberry 1
@@ -26,15 +25,13 @@ Yuzu 10
 Quince 2
 Jackfruit 12
 Orange 1
-Ugli 4
-fruit 16
+Ugli fruit 4
 Nance 1
 Olive 7
 Cherry 7
 Pomelo 7
 Mulberry 2
-Blood 1
-orange 1
+Blood orange 1
 Plum 2
 Lemon 10
 Coconut 2
@@ -50,13 +47,12 @@ Watermelon 1
 Rambutan 2
 Plantain 6
 Pear 5
-Goji 2
+Goji berry 2
 Mango 6
 Tamarind 4
 Apple 3
-Solanum 8
-quitoense 8
-Star 1
+Solanum quitoense 8
+Star fruit 1
 Banana 2
 Cucumber 15
 Tamarillo 6
@@ -73,17 +69,15 @@ Prune 3
 Clementine 2
 Lime 4
 Currant 2
-Purple 2
-mangosteen 2
+Purple mangosteen 2
 Kiwifruit 1
 Damson 2
 Physalis 2
 Huckleberry 2
-Chico 2
+Chico fruit 2
 Salmonberry 3
 Jujube 1
-Custard 4
-apple 4
+Custard apple 4
 Passionfruit 2
 Grape 2
 Pomegranate 4
@@ -95,6 +89,6 @@ Tangerine 4
 Peach 1
 Jabuticaba 8
 Blackberry 4
-Miracle 9
+Miracle fruit 9
 Melon 1
 berryfake 1

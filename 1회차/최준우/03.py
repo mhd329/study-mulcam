@@ -1,7 +1,7 @@
 
 with open('data/fruits.txt', 'r', encoding='utf-8') as f:
     text = f.read()
-    names = text.split()
+    names = text.split('\n')
     berries ={}
 
     for i in names:
