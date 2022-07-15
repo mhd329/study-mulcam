@@ -1,0 +1,7 @@
+print('2회차 배서림')
+print('Hello, Python!')
+print('1일차 파이썬 공부 중')
+print('2일차 파이썬 공부 중')
+print('3일차 파이썬 공부 중')
+print('4일차 파이썬 공부 중')
+print('5일차 파이썬 공부 중')
