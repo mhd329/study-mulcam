@@ -3,7 +3,12 @@ from pprint import pprint
 
 
 def movie_info(movie):
-    pass 
+    result = {'gener_ids' : movie.get('gener_ids'),
+              'id' : movie.get('id'),
+              'overview' : movie.get('overview'),
+              'teitle' : movie.get('titel'),
+              'vote_average' : 8.7}
+    return result   
     # 여기에 코드를 작성합니다.    
 
 
