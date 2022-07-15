@@ -18,6 +18,7 @@ def movie_info(movies, genres):
 
                 if movie['genre_ids'][idx] == genre['id']: # idx 인덱스 값이 genre 딕셔너리 안의 key 값이 id인 value 값과 같을 때, idx 인덱스 값을 genre 딕셔너리 안의 key 값이 name인 value 값으로 변경
                     movie['genre_ids'][idx] = genre['name']
+        movie['genre_names'] = movie.pop('genre_ids')
     return movies_li
 
         

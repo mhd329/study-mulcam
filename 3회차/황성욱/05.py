@@ -14,7 +14,9 @@ def movie_info(movie, genres):
         for j in range(len(new_dict['genre_ids'])):
             if new_dict['genre_ids'][j] == i['id']:
                 new_dict['genre_ids'][j] = i['name']
-            
+    
+    new_dict['genre_names'] = new_dict.pop('genre_ids')
+
     return new_dict
 
 # 아래의 코드는 수정하지 않습니다.
