@@ -1,9 +1,8 @@
 import json
-from operator import itemgetter
 from pprint import pprint
 
 def movie_info(movie, genres):
-    
+
     result = []
     for x in range(len(movie)):
         genre_names = []
@@ -18,6 +17,7 @@ def movie_info(movie, genres):
         'title' : movie[x].get('title'),
         'vote_average' : movie[x].get('vote_average')
         })
+    result.sort(reverse=True, key=lambda result : result['vote_average'])
     return  result
 
 # 아래의 코드는 수정하지 않습니다.
