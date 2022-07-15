@@ -1,30 +1,33 @@
 import json
 from pprint import pprint
+from unittest import result
 
 
 def movie_info(movies, genres):
     pass 
-    # 여기에 코드를 작성합니다.  
-    def genres_name():
-        genres_name = []
-        for gen_id in movies['genre_ids']:
-            # print(gen_id)
-            for gen_num in genres:
-                # print(gen_num.get("id"))
-                if gen_id == gen_num.get("id"):
-                    genres_name.append(gen_num.get("name"))
-        return genres_name
+    # 여기에 코드를 작성합니다.
+    movie_list = []
+    for mov in movies:
+        
+        def genres_name():
+            genres_name = []
+            for gen_id in mov['genre_ids']:
+                # print(gen_id)
+                for gen_num in genres:
+                    # print(gen_num.get("id"))
+                    if gen_id == gen_num.get("id"):
+                        genres_name.append(gen_num.get("name"))
+            return genres_name
 
-    for movie in movies :
         result = {
             'genre_names' : genres_name(),
-            'id' : movies.get('id'),
-            'title' : movies.get('title'),
-            'overview' : movies.get('overview'),
-            'vote_average' : movies.get('vote_average')
+            'id' : mov.get('id'),
+            'title' : mov.get('title'),
+            'overview' : mov.get('overview'),
+            'vote_average' : mov.get('vote_average')
         }
-
-    return movie
+        movie_list.append(result)
+    return movie_list
         
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
