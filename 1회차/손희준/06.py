@@ -5,21 +5,21 @@ from pprint import pprint
 def movie_info(movies, genres):
     pass 
     # 여기에 코드를 작성합니다.
-m =  open('data/movies.json','r',encoding='utf-8')
-movie = json.load(m)
-f =  open('data/genres.json','r',encoding='utf-8')
-genres = json.load(f)
-names = []
-
-
-ids = movie['genre_ids']
-for i in genres:
-    if i['id'] in ids:
-        names.append(i['name'])
-summary = {'genre_names':names,'id':movie['id'],'overview':movie['overview'],'title':movie['title'],'vote_average':movie['vote_average']}
-   
-print(summary)
-
+    movies_info_dict = []    
+    
+    for movie in movies:        
+        genre_ids = movie['genre_ids']        
+        gerne_names = []        
+        for genre in genres:            
+            if genre['id'] in genre_ids:                
+                gerne_names.append(genre['name'])        
+        key_list = ['id', 'title', 'poster_path', 'vote_average', 'overview']        
+        movie_info_dict = {}        
+        for key in key_list:
+            movie_info_dict[key] = movie[key]        
+        movie_info_dict['gerne_names'] = gerne_names        
+        movies_info_dict.append(movie_info_dict)
+    return movies_info_dict
     
  
 
@@ -34,6 +34,7 @@ if __name__ == '__main__':
     genres_list = json.load(genres_json)
 
     pprint(movie_info(movies_list, genres_list))
+    
 import sys
 sys.stdout = open('06.txt','w',encoding='utf-8')
 pprint(movie_info(movies_list, genres_list))
