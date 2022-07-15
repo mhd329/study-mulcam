@@ -4,7 +4,16 @@ from pprint import pprint
 
 def movie_info(movie, genres):
     pass 
-    # 여기에 코드를 작성합니다.  
+    x = open('data/movie.json','r',encoding='utf-8')
+    mov = json.load(x)
+    y = open('data/genres.json','r',encoding='utf-8')
+    gen = json.load(y)
+    num = mov['genre_ids']
+    
+
+
+    dic = {'genre_name' : gen['id']}
+
         
 
 # 아래의 코드는 수정하지 않습니다.
