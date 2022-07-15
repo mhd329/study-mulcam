@@ -10,13 +10,13 @@ def movie_info(movie, genres):
         'overview': movie.get('overview')
     }
 
-    n = [] # 최종값을 저장할 리스트
-    for i in movie['genre_ids']: # genre_ids가 18, 80 i는 18과 80을 순회
-        for j in genres: # genres의 id를 순회
-            if j['id'] == i: # j가 i의 값과 같다면 최종 리스트에 name을 추가
-                n.append(j['name'])
+    genre_name = [] # 최종 리스트
+    for i in movie['genre_ids']: # i는 18과 80을 순회
+        for j in genres: # j는 genres를 순회
+            if j['id'] == i: # j['id']가 18과 20을 만나면 최종 리스트에 append
+                genre_name.append(j['name'])
 
-    info['genres_names'] = n
+    # info['genres_names'] = genre_name
 
     return info
     # 여기에 코드를 작성합니다.
