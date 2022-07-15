@@ -8,10 +8,15 @@ def movie_info(movies, genres):
     key_list = ['id', 'title', 'vote_average', 'overview', 'genre_names']
 
     for movie in movies:
-            elements = {}
-            for key in key_list:
-                elements[key] = movie.get(key)  # 'NO RESULT' 대신에 장르 대응시켜야함 
-            result.append(elements)
+        genre_ids = movie.get('genre_ids')
+        genre_list = []
+        for genre in genres:
+            if genre['id'] in genre_ids:
+                genre_list.append(genre['name'])
+        elements = {}
+        for key in key_list:
+            elements[key] = movie.get(key,genre_list)  # 'NO RESULT' 대신에 장르 대응시켜야함 
+        result.append(elements)
     return result
 
 
