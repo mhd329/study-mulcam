@@ -16,12 +16,12 @@ for fru in idx:
             fname.append(fru)      
 
 count_str = str(count)
-# fname_str = ",".join(fname)    # *삽질 굳이 str으로 만들고 안해도 됬음 
-# fname_str1 = (f'{fname_str}\n') # for문을 사용해서 목록을 꺼내서 사용하면됨
-                                  # 굳이 b.write(f'fname_str1}\n')로 바로 보내려고하다 보내지지가 않아서 시간버림
-                                  # 리스트는 for문을 꺼내서 하나씩 보내자 (자동 str됨)
+fname_str = ",".join(fname)    # *삽질 굳이 str으로 만들고 안해도 됬음 
+fname_str1 = (f'{fname_str}\n') # for문을 사용해서 목록을 꺼내서 사용하면됨
+                                #   굳이 b.write(f'fname_str1}\n')로 바로 보내려고하다 보내지지가 않아서 시간버림
+                                #   리스트는 for문을 꺼내서 하나씩 보내자 (자동 str됨)
 
-with open('t02.txt','w',encoding='utf-8') as b: 
+with open('02.txt','w',encoding='utf-8') as b: 
     b.write(f'{count_str}\n')
     for fs in fname:
         b.write(f'{fs}\n')
