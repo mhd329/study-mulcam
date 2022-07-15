@@ -3,8 +3,17 @@ from pprint import pprint
 
 
 def movie_info(movie):
-    pass 
-    # 여기에 코드를 작성합니다.    
+    del movie["adult"]
+    del movie["backdrop_path"]
+    del movie["original_language"]
+    del movie["original_title"]
+    del movie["popularity"]
+    del movie["poster_path"]
+    del movie["release_date"]
+    del movie["video"]
+    del movie["vote_count"]
+
+    return movie
 
 
 # 아래의 코드는 수정하지 않습니다.

@@ -3,7 +3,25 @@ from pprint import pprint
 
 
 def movie_info(movies, genres):
-    pass 
+    for i in range(len(movies)):
+        del movies[i]["adult"]
+        del movies[i]["backdrop_path"]
+        del movies[i]["original_language"]
+        del movies[i]["original_title"]
+        del movies[i]["popularity"]
+        del movies[i]["poster_path"]
+        del movies[i]["release_date"]
+        del movies[i]["video"]
+        del movies[i]["vote_count"]
+        movies[i]["genre_names"]=[]
+        for j in range(len(movies[i]["genre_ids"])):
+            for k in range(len(genres)): 
+                if movies[i]["genre_ids"][j]==genres[k]["id"]:
+                    movies[i]["genre_names"].append(genres[k]["name"])
+        del movies[i]["genre_ids"]
+
+
+    return movies  
     # 여기에 코드를 작성합니다.  
         
         
