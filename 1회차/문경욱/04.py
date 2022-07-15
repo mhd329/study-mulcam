@@ -3,8 +3,22 @@ from pprint import pprint
 
 
 def movie_info(movie):
-    pass 
-    # 여기에 코드를 작성합니다.    
+    info_dict = {}
+    movie_ids = movie['genre_ids']
+    movie_id = movie['id']
+    movie_overview = movie['overview']
+    movie_title = movie['title']
+    movie_average = movie['vote_average']
+
+    info_dict['genre_ids'] = movie_ids
+    info_dict['id'] = movie_id
+    info_dict['overview'] = movie_overview
+    info_dict['title'] = movie_title
+    info_dict['vote_average'] = movie_average
+
+    return info_dict
+
+
 
 
 # 아래의 코드는 수정하지 않습니다.
