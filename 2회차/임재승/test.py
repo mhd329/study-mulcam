@@ -11,23 +11,7 @@ from pprint import pprint
 
 def movie_info(movies, genres):
     # result와 genre_id_name 선언
-    new = {}
-    gen_list = []
-
-    # print(movie.get('genre_ids'))
-    for num in movies.get('genre_ids'):
-        # print('삐비비비비비비비빅')
-        # print(num)
-        for gen in genres:
-            if num == gen['id']:
-                gen_list.append(gen['name'])
-    new['genre_names'] = gen_list
-    new['id'] = movies['id']
-    new['title'] = movies['title']
-    new['vote_average'] = movies['vote_average']
-    new['overview'] = movies['overview']
-
-    return new
+    pass
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
     movies_json = open('data/movies.json', encoding='UTF8')
@@ -38,3 +22,5 @@ if __name__ == '__main__':
 
     pprint(movie_info(movies_list, genres_list))
 
+
+print(movies_list[0])

@@ -1,10 +1,36 @@
 import json
 from pprint import pprint
+from unittest import result
 
 
 def movie_info(movies, genres):
-    pass 
-    # 여기에 코드를 작성합니다.  
+    result = []
+    # 장르는 id 와 name
+    # 장르의 id와 list의 genre_ids가 같으면 장르의 name을 temp가 받아온다.
+    
+    for list in movies:
+        temp = {}
+        gen_list = []
+
+        for idx in range(0, len(list['genre_ids'])):
+            for gen in genres:
+                if gen['id'] == list['genre_ids'][idx]:
+                    gen_list.append(gen['name'])
+        
+        temp['genre_names'] = gen_list
+
+        temp['id'] = list['id']
+        
+        temp['title'] = list['title']
+
+        temp['vote_average'] = list['vote_average']
+
+        temp['overview'] = list['overview']
+
+        result.append(temp)
+
+    return result
+    
         
         
 # 아래의 코드는 수정하지 않습니다.
