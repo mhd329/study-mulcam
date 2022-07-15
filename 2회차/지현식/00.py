@@ -1,4 +1,4 @@
-f=open("C:\\Users\\user\\Desktop\\01-PJT-01\\2회차\\지현식\\00","w")
+f=open("C:\\Users\\user\\Desktop\\01-PJT-01\\2회차\\지현식\\00.txt","w")
 f.write("2회차 지현식\n")
 f.write("Hello,Python!\n")
 
