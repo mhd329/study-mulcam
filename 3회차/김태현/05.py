@@ -3,7 +3,22 @@ from pprint import pprint
 
 
 def movie_info(movie, genres):
-    pass 
+
+    genre_names = []
+    for num in movie.get('genre_ids'):
+        for i in genres:
+            if num == i.get('id'):
+                genre_names.append(i.get('name'))
+
+    result = {
+        'id' : movie.get('id'),
+        'title' : movie.get('title'),
+        'vote_average' : movie.get('vote_average'),
+        'overview' : movie.get('overview'),
+        'genre_names' : genre_names
+    }
+
+    return result
     # 여기에 코드를 작성합니다.  
         
 
@@ -15,4 +30,6 @@ if __name__ == '__main__':
     genres_json = open('data/genres.json', encoding='UTF8')
     genres_list = json.load(genres_json)
 
+
+    # print(movie)
     pprint(movie_info(movie, genres_list))
