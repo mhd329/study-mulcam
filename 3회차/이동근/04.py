@@ -3,8 +3,11 @@ from pprint import pprint
 
 
 def movie_info(movie):
-    pass 
-    # 여기에 코드를 작성합니다.    
+    # 여기에 코드를 작성합니다.
+    req = "id, title, vote_average, overview, genre_ids".split(', ')
+    data = {i:movie[i] for i in req}
+    
+    return data
 
 
 # 아래의 코드는 수정하지 않습니다.

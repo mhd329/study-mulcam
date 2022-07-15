@@ -3,8 +3,21 @@ from pprint import pprint
 
 
 def movie_info(movies, genres):
-    pass 
-    # 여기에 코드를 작성합니다.  
+    # 여기에 코드를 작성합니다.
+    result = []
+
+    req = "id, title, vote_average, overview, genre_ids".split(", ")
+    target = "genre_ids"
+    repl = "genre_names"
+
+    for movie in movies:
+        data = {i:movie[i] for i in req if i != target}
+        data[repl] = [j["name"] for i in movie[target] for j in genres if j["id"] == i]
+        result.append(data)
+
+    result = sorted(result, key=lambda x: x["vote_average"], reverse=True)
+
+    return result
         
         
 # 아래의 코드는 수정하지 않습니다.
