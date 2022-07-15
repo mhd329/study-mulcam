@@ -10,12 +10,7 @@ def movie_info(movies, genres):
     for movie in movies:
         
         movie_genre_ids = movie.get('genre_ids')
-        movie_genre_names = []
-        
-        for mgi in movie_genre_ids:
-            for genre in genres:
-                if mgi == genre.get('id'):
-                    movie_genre_names.append(genre.get('name'))
+        movie_genre_names = [genre.get('name') for genre in genres if genre.get('id') in movie_genre_ids]
                     
         result = {
             'genre_ids': movie_genre_names,
