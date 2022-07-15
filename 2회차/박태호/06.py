@@ -3,9 +3,31 @@ from pprint import pprint
 
 
 def movie_info(movies, genres):
-    pass 
+     m = open('data/movies.json', 'r', encoding='utf-8')
+     g = open('data/genres.json', 'r', encoding='utf-8')
+     g_info = json.load(g)
+     ms_info = json.load(m)
+     jang = []
+    # ids = ms_info['genre_ids'] # 타입이 안맞음
+     for idx in range(len(ms_info)):
+        ids = ms_info[idx]['genre_ids'] 
+        #print(ids) #아이디들 리스트로 []
+
+        for idd in ids:           
+            # [18, 80] 하나씩    
+            for dicts in g_info: #id 하나씩 dicts에 할당
+                # print(dicts['id'])
+                
+                 if idd == dicts['id']:      # 영화 아이디에서 가져온 거랑 장르에서 가져온 번호 비교
+                    jang.append(dicts['name'])  #            같으면 이름 저장 dicts['name']
+     print(jang)
+
+
     # 여기에 코드를 작성합니다.  
         
+
+
+
         
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
