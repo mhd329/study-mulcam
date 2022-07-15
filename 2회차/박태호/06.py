@@ -7,11 +7,13 @@ def movie_info(movies, genres):
      g = open('data/genres.json', 'r', encoding='utf-8')
      g_info = json.load(g)
      ms_info = json.load(m)
-     jang = []
+     fi=[]
     # ids = ms_info['genre_ids'] # 타입이 안맞음
      for idx in range(len(ms_info)):
         ids = ms_info[idx]['genre_ids'] 
         #print(ids) #아이디들 리스트로 []
+        jang = []
+        
 
         for idd in ids:           
             # [18, 80] 하나씩    
@@ -20,9 +22,19 @@ def movie_info(movies, genres):
                 
                  if idd == dicts['id']:      # 영화 아이디에서 가져온 거랑 장르에서 가져온 번호 비교
                     jang.append(dicts['name'])  #            같으면 이름 저장 dicts['name']
-     print(jang)
+        result = {
+            'genre_names' : jang,
+            'id' : ms_info[idx].get('id'),
+            'title' : ms_info[idx].get('title'),
+            'vote_average' : ms_info[idx].get('vote_average'),
+            'overview' : ms_info[idx].get('overview')
 
 
+        }
+        fi.append(result)
+
+     return fi
+#id, title, vote_average, overview, genre_names
     # 여기에 코드를 작성합니다.  
         
 
