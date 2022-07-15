@@ -1,9 +1,12 @@
 with open('data/fruits.txt', 'r', encoding = 'utf-8') as f:
     a={}
     for i in f:
-        l=i.split('\n')
+        l=str.split(i, '\n')
         for b in l:
             if b in a:
-                a[l]+=1
+                a[b]+=1
             else:
-                a[1]==1
+                a[b]=1
+with open('03.txt', 'w', encoding = 'utf-8') as f:
+    for k, v in a.items():
+        f.write(f'{k}, {v}\n')
