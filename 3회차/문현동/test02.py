@@ -4,7 +4,7 @@ res = []
 
 with open('data/fruits.txt', 'r', encoding='utf-8') as f:
 
-    for i in f:
+    for i in f: # 수정 완료... 그냥 내가 실수하고 있었다.
         line = i.strip()
         if line.endswith("berry"):
             berry.append(line)

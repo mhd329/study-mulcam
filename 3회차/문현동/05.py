@@ -3,19 +3,25 @@ from pprint import pprint
 
 def movie_info(movie, genres):
     
-    genre_ids_list = []
-    for i in range(len(movie['genre_ids'])):
-        genre_ids_list.append(movie['genre_ids'][i])
-    
     res =\
     {
-        'genre_names': genre_ids_list,
+        'genre_names': [],
         'id' : movie['id'],
         'overview' : movie['overview'],
         'title' : movie['title'],
         'vote_average' : movie['vote_average']
     }
     
+    genre_ids = []
+    
+    genre_ids += movie['genre_ids']
+
+    for i in genres_list:
+        for j in genre_ids:
+            if i['id'] == j:
+                res['genre_names'].append(i['name'])
+                genre_ids.remove(j)
+                
     return res
         
 # 아래의 코드는 수정하지 않습니다.
