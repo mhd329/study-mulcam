@@ -4,6 +4,8 @@ from pprint import pprint
 
 def movie_info(movie):
     pass 
+    for key, value in movie.items():
+        print(f'\'{key}\' : \'{value}\'', end=',\n')
     # 여기에 코드를 작성합니다.    
 
 
