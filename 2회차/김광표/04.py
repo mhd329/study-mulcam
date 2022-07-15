@@ -17,6 +17,3 @@ if __name__ == '__main__':
     movie = json.load(movie_json)
     
     pprint(movie_info(movie))
-    a = movie_info(movie)
-for i in a['genre_ids'] :
-    print(i+6)
