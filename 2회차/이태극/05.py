@@ -5,14 +5,20 @@ from pprint import pprint
 def movie_info(movie, genres):
     pass 
     moive_info_dict={}
-    g_list=[]
-    
+    genre_id_name={}
+    get_id=0
+    for d in genres :
+        genre_id_name[d['id']] = d['name']
+    genre_name = []
+    for id in movie['genre_ids'] :
+        genre_name.append(genre_id_name[id])
+    moive_info_dict['genre_names'] = genre_name
     # for i in range(len(genres)):
     #     if genres[i].get('id') == 80:
     #         g_list.append(genres[i].get('name'))
     #     if genres[i].get('id') == 18:
     #         g_list.append(genres[i].get('name'))
-    moive_info_dict['genre_names']=g_list
+    #moive_info_dict['genre_names']=g_list
     moive_info_dict['id'] = movie["id"]     
     moive_info_dict['overview']=movie["overview"]
     moive_info_dict['title']=movie['title']

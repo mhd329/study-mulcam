@@ -6,6 +6,7 @@ with open('2회차/이태극/data/fruits.txt', 'r',encoding="utf-8") as d:
 lines=[line.rstrip('\n') for line in lines]
 #print(len(lines))    
 with open('2회차/이태극/01.txt', 'w',encoding="utf-8") as a:
+
     a.write(str(len(lines))+"\n")
     
         

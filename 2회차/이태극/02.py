@@ -15,7 +15,7 @@ with open('2회차/이태극/data/fruits.txt', 'r',encoding="utf-8") as d:
                 continue
             else:
                 f_list.append(i)
-    print(len(f_list))
+    #print(len(f_list))
     with open('2회차/이태극/02.txt', 'w',encoding="utf-8") as a:
         a.write(str(len(f_list))+"\n")
         for x in range(len(f_list)):
