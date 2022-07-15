@@ -1,11 +1,19 @@
 import json
 from pprint import pprint
+from turtle import title
 
 
 def movie_info(movie):
     pass 
     # 여기에 코드를 작성합니다.    
-
+    my_dict = {
+        'genre_ids': movie['genre_ids'],
+        'id' : movie['id'],
+        'overview' : movie['overview'],
+        'title' : movie['title'],
+        'vote_average' : movie['vote_average']        
+        }
+    return my_dict
 
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
