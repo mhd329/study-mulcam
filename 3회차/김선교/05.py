@@ -1,11 +1,20 @@
 import json
 from pprint import pprint
 
-
 def movie_info(movie, genres):
-    pass 
-    # 여기에 코드를 작성합니다.  
-        
+    genre_names = []
+    for i in range(len(movie.get('genre_ids'))):
+        for ii in range(len(genres)):
+            if movie.get('genre_ids')[i] == genres[ii].get('id'):
+                genre_names.append(genres[ii].get('name'))
+
+    return  {
+        'genre_names' : genre_names,
+        'id' : movie.get('id'),
+        'overview' : movie.get('overview'),
+        'title' : movie.get('title'),
+        'vote_average' : movie.get('vote_average')
+        }
 
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':

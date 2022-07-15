@@ -3,7 +3,15 @@ from pprint import pprint
 
 
 def movie_info(movie):
-    pass 
+    f = open('data/movie.json', 'r', encoding='utf-8')
+    mv = json.load(f)
+    return  {
+        'genre_ids' : mv.get('genre_ids'),
+        'id' : mv.get('id'),
+        'overview' : mv.get('overview'),
+        'title' : mv.get('title'),
+        'vote_average' : mv.get('vote_average')
+        }
     # 여기에 코드를 작성합니다.    
 
 
