@@ -7,7 +7,7 @@ def movie_info(movie):
     # overview
     # title
     # vote_average    
-    shawshank = movie
+    shawshank = movie # 이름을 쇼생크라 짓고싶었어요
     result = {
         'genre_ids'     : shawshank.get('genre_ids'),
         'overview'      : shawshank.get('overview'),
