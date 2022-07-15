@@ -1,9 +1,19 @@
 import json
 from pprint import pprint
-
+a = []
 
 def movie_info(movies, genres):
-    pass 
+    for moive in movies:
+        pprint(moive)
+        print(type(moive))
+    #print(type(movies.get('genre_ids'))) 리스트로 받았음
+        for id in movie.get('genre_ids'):
+            for dict in genres:
+                if dict['id'] == id: #id값에 따른 영화이름 가져오기
+                    #print(dict['name'],type(dict['name']))  #dict['name']은 string
+                    a.append(dict['name'])
+    
+    return 
     # 여기에 코드를 작성합니다.  
         
         
