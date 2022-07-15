@@ -5,7 +5,14 @@ from pprint import pprint
 def movie_info(movie):
     pass 
     # 여기에 코드를 작성합니다.    
-
+    result = {
+        'id' : movie['id'],
+        'title' : movie['title'],
+        'vote_average' : movie['vote_average'],
+        'overview' : movie['overview'],
+        'genre_ids' : movie['genre_ids']
+    }
+    return result
 
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
