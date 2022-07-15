@@ -30,13 +30,13 @@
 
 - 5, 6번
   
+  - 6번 → [[Python] list에서 dictionary 정렬](https://inma.tistory.com/138)을 참고하였다.
+  
   - 결과는 제대로 출력되는데, for문을 너무 많이 중첩시킨 것 같아서 마음에 들지 않는다.
   
   - 딕셔너리의 특성과 관련 메소드를 잘 활용하면 피할 수 있을 것 같은데 잘 모르겠다..
   
   - 어떻게 개선해야 할까?
-
-
 
 ## 코드
 
@@ -73,10 +73,10 @@
   def movie_info(movies, genres):
       # 별점이 높은 순서대로, 리스트 속 딕셔너리 정렬
       movies_sorted_by_vote = sorted(movies, key=itemgetter('vote_average'), reverse=True)
-      
+  
       info = dict()
       movies_info_list = list()
-      
+  
       # 정렬된 리스트 속 딕셔너리 탐색
       for m in movies_sorted_by_vote:
           genre_ids = m.get('genre_ids')  # [18, 80]
@@ -99,6 +99,6 @@
   
           # 영화 정보들이 담긴 딕셔너리를 리스트에 추가
           movies_info_list.append(info)
-      
+  
       return movies_info_list
   ```
