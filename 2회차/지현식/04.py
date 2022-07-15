@@ -3,9 +3,11 @@ from pprint import pprint
 
 
 def movie_info(movie):
-    pass 
-    # 여기에 코드를 작성합니다.    
-
+    key_list={'id','title','vote_average','overview','gener_ids'}
+    movies={}
+    for key in key_list:
+        movies[key]=movie[key]
+    return movies
 
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
