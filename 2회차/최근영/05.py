@@ -3,8 +3,10 @@ from pprint import pprint
 
 
 def movie_info(movie, genres_list):
+    
+    new_genres_list=find_geners(movie.get('genre_ids'),genres_list)
     answer = {
-        'genre_names' : genres_list,
+        'genre_names' : new_genres_list,
         'id' : movie.get('id'),
         'overview' : movie.get('overview'),
         'title' : movie.get('title'),
@@ -28,5 +30,4 @@ if __name__ == '__main__':
     genres_json = open('data/genres.json', encoding='UTF8')
     genres_list = json.load(genres_json)
 
-    new_genres_list=find_geners(movie.get('genre_ids'),genres_list)
-    pprint(movie_info(movie, new_genres_list))
+    pprint(movie_info(movie, genres_list))
