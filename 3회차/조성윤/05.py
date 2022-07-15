@@ -12,7 +12,7 @@ def movie_info(movie, genres):
     genre_name = []
     for id in movie['genre_ids'] :
         genre_name.append(genre_id_name[id])
-        movie['genre_names'] = genre_name
+    movie['genre_names'] = genre_name
       
     result['genre_names'] = movie['genre_names']
     result['id'] = movie['id']
