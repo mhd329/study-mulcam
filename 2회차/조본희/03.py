@@ -1,6 +1,3 @@
-from pprint import pprint
-
-
 with open('data/fruits.txt', 'r', encoding='utf-8') as r:
     text = r.read()
     fruit = text.split('\n')
