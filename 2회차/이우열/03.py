@@ -9,5 +9,6 @@ with open('./data/fruits.txt', 'r', encoding='utf-8') as f:
         else:
             fruit[line] += 1
 
-    for k, v in fruit.items():
-        print(k, v)
+    with open('03.txt', 'w', encoding='utf-8') as a:
+        for k, v in fruit.items():
+            a.write(f'{k} {v}\n')

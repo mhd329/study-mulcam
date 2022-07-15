@@ -10,7 +10,8 @@ with open('./data/fruits.txt', 'r', encoding='utf-8') as f:
                 berry.append(line)
                 cnt += 1
 
-    print(cnt)
+    with open('02.txt', 'w', encoding='utf-8') as a:
+        a.write(f'{cnt}\n')
 
-    for line in berry:
-        print(line)
+        for line in berry:
+            a.write(f'{line}\n')
