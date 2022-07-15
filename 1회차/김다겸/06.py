@@ -3,8 +3,26 @@ from pprint import pprint
 
 
 def movie_info(movies, genres):
-    pass 
-    # 여기에 코드를 작성합니다.  
+    movies_list = []
+
+    for movie in movies:
+        ids = movie['genre_ids']
+        names = []
+
+        for genre in genres:
+            if genre['id'] in ids:
+                names.append(genre['name']) 
+
+        list = ['id', 'title', 'poster_path', 'vote_average', 'overview']
+        dict = {}
+
+        for i in list:
+            dict[i] = movie[i]
+
+        dict['gerne_names'] = names
+        movies_list.append(dict)
+
+    return movies_list
         
         
 # 아래의 코드는 수정하지 않습니다.
