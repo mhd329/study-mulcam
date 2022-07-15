@@ -6,7 +6,7 @@
 <hr/>
 <br/>
 
-### **1. with ~**
+### 1. with ~
 
     with {expression} as {variable}:
         Code Block
