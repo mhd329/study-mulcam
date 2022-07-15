@@ -7,6 +7,7 @@ for i in fruit:
         fruit_dict[i] = 1
     else:
         fruit_dict[i] += 1
-        
-for i in fruit_dict:
-    print(i, fruit_dict[i])
+
+with open("03.txt", "w", encoding='utf-8') as f:
+    for i in fruit_dict:
+        f.write("{} {}\n".format(i, fruit_dict[i]))

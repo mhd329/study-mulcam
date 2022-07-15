@@ -13,6 +13,7 @@ for i in berry:
     else:
         berries.append(i)
         
-print(len(berries))
-for i in berries:
-    print(i)
+with open("02.txt", 'w', encoding="utf-8") as f:
+    f.write(str(len(berries)) + "\n")
+    for i in berries:
+        f.write(i + "\n")
