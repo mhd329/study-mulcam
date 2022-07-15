@@ -1,11 +1,21 @@
+from ctypes.wintypes import HENHMETAFILE
 import json
 from pprint import pprint
 
 
 def movie_info(movie, genres):
-    pass 
-    # 여기에 코드를 작성합니다.  
-        
+    li = ['id', 'title', 'vote_average', 'overview', 'genre_ids']
+    new_dict = {}
+    for key, value in movie.items():
+        if key in li:
+            new_dict[key] = value
+
+    for i in genres_list:
+        for j in range(len(new_dict['genre_ids'])):
+            if new_dict['genre_ids'][j] == i['id']:
+                new_dict['genre_ids'][j] = i['name']
+            
+    return new_dict
 
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
