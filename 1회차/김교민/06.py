@@ -6,21 +6,6 @@ with open('data/movies.json', 'r', encoding = 'utf-8') as f:
     with open('data/genres.json', 'r', encoding = 'utf-8') as g:
         a = json.load(f)
         b = json.load(g)
-        # name = []
-        # names = []
-        # for m in a:
-        #     for c in m['genre_ids']:
-        #         for i in range(0, len(b)):
-        #             if b[i]['id'] == c:
-        #                 name.append(b[i]['name'])
-        # result = {
-        # 'genre_names' : name,
-        # 'id' : m.get('id'),
-        # 'overview' : m.get('overview'),
-        # 'title' : m.get('title'),
-        # 'vote_average' : m.get('vote_average')
-        # }
-        # pprint(result)
         n = {}
         result = []
         for c in b:
