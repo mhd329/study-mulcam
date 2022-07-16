@@ -29,8 +29,8 @@ for i in list(gens): # i는 리스트 gens의 값을 나열한 것이다.
     for k in i.values(): #gens 리스트의 밸류 값은 k이다 k를 순환시켜라
         if k in genid : # k가 genid의 값과 같으면 genn리스트에 i의 키값쌍을 더해라
            genn.append(i.get('name'))
-        # print(k,'k')
-            # genn = {'name' : i.get('name')}
+
+            # genn = {'name' : i.get('name')} (삽질 리스트...)
             # genn.setdefault(f'{k}',str(i.values()))
             # k.get('name')
             # genn.append(i.items())
