@@ -1,3 +1,8 @@
+# - 영화 데이터 `movie.json` 을 활용하여 필요한 정보로만 구성된 딕셔너리를 출력하시오.
+#     - 코드는 선언된 함수 내에 작성하며, 결과 딕셔너리를 반환합니다.
+#     - JSON으로 가져온 데이터가 함수의 인자로 전달됩니다.
+# - `id`, `title`, `vote_average`, `overview`, `genre_ids`으로 구성된 결과를 만듭니다.
+
 import json
 from pprint import pprint
 
@@ -5,18 +10,18 @@ from pprint import pprint
 def movie_info(movie):
     pass 
 
-mo = open('data/movie.json','r',encoding='utf8')# 여기에 코드를 작성합니다.   
+mo = open('data/movie.json','r',encoding='utf8') 
 ge = open('data/genres.json','r',encoding='utf8')
-mov = json.load(mo)
+mov = json.load(mo) # 4,5번 문제를 헷갈림, 
 gen = json.load(ge)
-gens = gen[0]
-movs = mov[0]
+gens = gen  # movie.json 파일의 인덱스는 하나이므로 번호추가 x
+movs = mov
 
 r = { 'genre_ids': movs.get ('genre_ids'),
-    #   'id' : gens.get('id'),
-    #   'overview': movs.get ('overview'),
-    #   'title': movs.get('title'),
-    #   'vote_average': movs.get('vote_average'),
+      'id' :  movs.get('id'),
+      'overview': movs.get ('overview'),
+      'title': movs.get('title'),
+      'vote_average': movs.get('vote_average'),
       } 
 pprint(r)
 
