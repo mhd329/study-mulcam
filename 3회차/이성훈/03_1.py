@@ -7,8 +7,7 @@ result = {}
 with open('data/fruits.txt', 'r', encoding = 'utf-8') as f:
     for i in f:
         i = i.rstrip('\n')
-        
-        if i in result.keys():
+        if i in result:
             result[i] += 1
         else:
             result[i] = 1
