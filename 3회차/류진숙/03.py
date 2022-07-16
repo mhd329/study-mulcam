@@ -1,7 +1,7 @@
+
 # 과일의 이름과 등장횟수
-
-
 # 불러와서 개행으로 split들을 나눔
+
 with open ('./data/fruits.txt', 'r', encoding = 'utf-8') as c:
     p = c.read()
     fruits = p.split('\n')

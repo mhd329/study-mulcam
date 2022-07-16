@@ -21,7 +21,8 @@ def movie_info(movie, genres):
         "vote_average": movie.get("vote_average")
     }
 
-    print(result)
+    return result
+
     # 여기에 코드를 작성합니다.  
         
 
