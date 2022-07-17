@@ -1,7 +1,7 @@
 # 프로젝트 01 - 파이썬 기반 데이터 활용
-00.py
+##00.py
 
-# 00. 파일에 내용 적기
+
 # with ~ as 키워드를 활용해서 file을 열어 쓰고 읽는 작업 수행
 
 
@@ -14,32 +14,33 @@ with open('00.txt','w',encoding = 'utf-8') as f:
 with open('00.txt','r',encoding = 'utf-8') as f:
     print(f.read())
 
-01.py
+##01.py
 
-#파일에 있는 문자열 개수 찾기
-#파일을 열고 1줄마다 cnt 1증가
-#총 갯수 출력
+파일에 있는 문자열 개수 찾기
+파일을 열고 1줄마다 cnt 1증가
+총 갯수 출력
+
 cnt = 0
 with open('fruits.txt','r', encoding = 'utf-8') as f:
     for line in f:  #i가 f에 저장된 데이터를 줄 단위로 읽어옴
         cnt += 1
     print(cnt)
 	
-02.py
+##02.py
 
-#파일의 데이터를 줄 단위로 읽음
-#공백이 있는 경우, .split으로 구분하여 
-# 각 인덱스에 해당 단어가 있는지 확인
+파일의 데이터를 줄 단위로 읽음
+공백이 있는 경우, .split으로 구분하여 
+ 각 인덱스에 해당 단어가 있는지 확인
+find(찾을문자, 찾기시작할위치)
+중복
 
-#find(찾을문자, 찾기시작할위치)
-#중복
 cnt = 0
 t_list = []
 with open('fruits.txt','r',encoding = 'utf-8') as f:
     for line in f:
-        if line.find('berry') != -1 : #문자열에 berry가 포함되어있다면
+        if line.find('berry') != -1 : 문자열에 berry가 포함되어있다면
             line = line.rstrip()
-            if line == 'berryfake':
+            if line == 'berryfake': 
                 continue
             if line not in t_list: 
                 t_list.append(line)
@@ -52,12 +53,12 @@ with open('02.txt','w', encoding = 'utf-8') as f:
     for char in t_list :
         f.write(f'{char}\n')
 
-03.py
+##03.py
 
-#파일 내 데이터 개수
-# for문을 활용, 데이터를 라인별로 읽으며 '\n'은 rstrip() method를 통해 제거
-# dict에 없는 값이라면 키를 추가하고 값을 1로 설정
-# 있다면 값만 +1
+파일 내 데이터 개수
+for문을 활용, 데이터를 라인별로 읽으며 '\n'은 rstrip() method를 통해 제거
+dict에 없는 값이라면 키를 추가하고 값을 1로 설정
+있다면 값만 +1
 
 dict = {}
 with open('fruits.txt','r',encoding = 'utf-8') as f:
@@ -74,7 +75,7 @@ with open('03.txt','w',encoding = 'utf-8') as f:
     for i in dict:
         f.write(f'{i} : {dict[i]}\n')
 
-04.py
+##04.py
 
 import json
 from pprint import pprint
@@ -82,8 +83,8 @@ from pprint import pprint
 
 
 def movie_info(movie):
-    #load() : json문자열을 파이썬 객체로 변환 
-    #출력할 내용을 dict에 직접 입력 후 return
+    load() : json문자열을 파이썬 객체로 변환 
+    출력할 내용을 dict에 직접 입력 후 return
     dict = {
         'genre_ids' : movie.get('genre_ids'),
         'id' : movie.get('id'),
@@ -95,20 +96,20 @@ def movie_info(movie):
     return dict
     
 
-# 아래의 코드는 수정하지 않습니다.
+ 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
     movie_json = open('data/movie.json', encoding='UTF8')
     movie = json.load(movie_json)
     
     pprint(movie_info(movie))
 
-05.py
+##05.py
 
 import json
 from pprint import pprint
 
-#반복문을 통해 movie.json내 "genre_ids"값을 읽어 이 값과
-# geners.json파일 내 id값이 일치하는 곳을 찾은 뒤 'name'의 값을 list에 저장
+반복문을 통해 movie.json내 "genre_ids"값을 읽어 이 값과
+geners.json파일 내 id값이 일치하는 곳을 찾은 뒤 'name'의 값을 list에 저장
 
 
 def movie_info(movie, genres):
@@ -133,7 +134,7 @@ def movie_info(movie, genres):
     return dict
         
 
-# 아래의 코드는 수정하지 않습니다.
+아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
     movie_json = open('data/movie.json', encoding='UTF8')
     movie = json.load(movie_json)
