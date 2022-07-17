@@ -3,7 +3,13 @@ from pprint import pprint
 
 
 def movie_info(movie):
-    pass 
+    result ={}
+    list = ['id', 'title', 'vote_average', 'overview', 'genre_ids']
+    for i in movie:
+        if i in list:
+            result[i] = movie[i]
+        
+    return result
     # 여기에 코드를 작성합니다.    
 
 

@@ -2,8 +2,19 @@ import json
 from pprint import pprint
 
 
-def movie_info(movie, genres):
-    pass 
+def movie_info(movie, genres): #리스트
+    result = { "genre_names":[] }
+
+    for i in genres:
+        if (i['id'] in movie['genre_ids']):
+            result["genre_names"].append(i['name'])
+        
+    list = ['id','title', 'vote_average', 'overview']
+    for i in movie:
+        if i in list:
+            result[i] = movie[i]
+        
+    return result
     # 여기에 코드를 작성합니다.  
         
 
@@ -16,3 +27,5 @@ if __name__ == '__main__':
     genres_list = json.load(genres_json)
 
     pprint(movie_info(movie, genres_list))
+    
+    
