@@ -4,25 +4,21 @@ from pprint import pprint
 
 def movie_info(movie, genres):
     pass 
-    # 여기에 코드를 작성합니다.  
-    f_movie = open('data/movie.json', 'r', encoding='utf-8')    
-    f_genres = open('data/genres.json', 'r', encoding = 'utf-8')
-    mv = json.load(f_movie)
-    gr = json.load(f_genres)
+    # 여기에 코드를 작성합니다.   
     lst = []
-    for i in mv.get('genre_ids'):
-        for n in range(len(gr)):
-            if gr[n]['id'] == i:
-                lst.append(gr[n]['name'])
+    for i in movie.get('genre_ids'):
+        for n in range(len(genres)):
+            if genres[n]['id'] == i:
+                lst.append(genres[n]['name'])
     result = {
         'genre_names' : lst,
-        'id' : mv.get('id'),
-        'title' : mv.get('title'),
-        'vote_average' : mv.get('vote_average'),
-        'overview' : mv.get('overview'),
+        'id' : movie.get('id'),
+        'title' : movie.get('title'),
+        'vote_average' : movie.get('vote_average'),
+        'overview' : movie.get('overview'),
     }
 
-    pprint(result)
+    return result
 
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
