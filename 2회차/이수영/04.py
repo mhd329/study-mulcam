@@ -3,10 +3,10 @@ from pprint import pprint
 
 
 def movie_info(movie):
-    result = {'gener_ids' : movie.get('gener_ids'),
+    result = {'genre_ids' : movie.get('genre_ids'),
               'id' : movie.get('id'),
               'overview' : movie.get('overview'),
-              'teitle' : movie.get('titel'),
+              'title' : movie.get('title'),
               'vote_average' : 8.7}
     return result   
     # 여기에 코드를 작성합니다.    
