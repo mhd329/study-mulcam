@@ -4,26 +4,21 @@ from pprint import pprint
 # 해야 할것. 무비를 리스트로 만들다. 
 # 리스트를 하나하나 result에 적용하고 result를 리스트에 넣는다. 
 # 끝
+
 def movie_info(movies, genres):
-    genre_names =[]
     result_list = []
-    movies_list = list(movies)
-    n3 = len(movies_list)
-    for i in range(n3):
+    for movie in movies:
         genre_names = []
-        movies = movies_list[i]
         n = len(genres)
-        n2 = len(movies.get('genre_ids'))
         for i in range(n):
-            for j in range(n2):
-                if genres[i].get('id') == movies.get('genre_ids')[j]:
-                    genre_names.append(genres[i].get('name'))
+            if genres[i].get('id') in movie.get('genre_ids'):
+                genre_names.append(genres[i].get('name'))
         result = {
             'genre_names' : genre_names,
-            'id' : movies.get('id'),
-            'overview' : movies.get('overview'),
-            'title' : movies.get('title'),
-            'vote_average' : movies.get('vote_average'),
+            'id' : movie.get('id'),
+            'overview' : movie.get('overview'),
+            'title' : movie.get('title'),
+            'vote_average' : movie.get('vote_average'),
         }
         result_list.append(result)
     return result_list

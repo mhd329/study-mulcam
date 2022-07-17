@@ -6,11 +6,9 @@ genre_names =[]
 
 def movie_info(movie, genres):
     n = len(genres)
-    n2 = len(movie.get('genre_ids'))
     for i in range(n):
-        for j in range(n2):
-            if genres[i].get('id') == movie.get('genre_ids')[j]:
-                genre_names.append(genres[i].get('name'))
+        if genres[i].get('id') in movie.get('genre_ids'):
+            genre_names.append(genres[i].get('name'))
     result = {
         'genre_names' : genre_names,
         'id' : movie.get('id'),
