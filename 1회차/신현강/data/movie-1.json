@@ -1,0 +1,22 @@
+{
+    "adult": false,
+    "backdrop_path": "/hkBaDkMWbLaf8B1lsWsKX7Ew3Xq.jpg",
+    "belongs_to_collection": {
+      "id": 263,
+      "name": "다크 나이트 시리즈",
+      "poster_path": "/lvI9k6dBqCPjisNlq0TBu1iiEZW.jpg",
+      "backdrop_path": "/xfKot7lqaiW4XpL5TtDlVBA9ei9.jpg"
+    },
+    "budget": 185000000,
+    
+    "homepage": "https://www.warnerbros.com/movies/dark-knight/",
+    "id": 155,
+    "imdb_id": "tt0468569",
+    "original_language": "en",
+    "original_title": "The Dark Knight",
+    "overview": "범죄와 부정부패를 제거하여 고담시를 지키려는 배트맨. 그는 짐 고든 형사와 패기 넘치는 고담시 지방 검사 하비 덴트와 함께 도시를 범죄 조직으로부터 영원히 구원하고자 한다. 세 명의 의기투합으로 위기에 처한 악당들이 모인 자리에 보라색 양복을 입고 얼굴에 짙게 화장을 한 괴이한 존재가 나타나 배트맨을 죽이자는 사상 초유의 제안을 한다. 그는 바로 어떠한 룰도, 목적도 없는 사상 최악의 악당 미치광이 살인광대 조커. 배트맨을 죽이고 고담시를 끝장내버리기 위한 조커의 광기 어린 행각에 도시는 혼란에 빠지는데...",
+    "popularity": 67.147,
+    "poster_path": "/e1nMtpUTtaJGXbeZZ2ajaIOyTgU.jpg",
+    "production_companies": [
+    ]
+}
