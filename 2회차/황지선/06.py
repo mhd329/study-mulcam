@@ -12,10 +12,43 @@
 import json
 from pprint import pprint
 
+# 6번은 삼중 포문
+# 5번을 여러개 넣은 리스트라고 생각해도 됨
+# for문 하나만 써도 된대!!!!!!!!!!!!!!!!
+# 5번코드를 풀어서 복붙해서~ for문을 잘 넣으면 됨!
+
 
 def movie_info(movies, genres):
-    pass 
-    # 여기에 코드를 작성합니다.  
+    
+    result = []
+
+    def movie_return():
+        names = []
+
+        for m in range(len(movies)):
+            for n in movies[m].get('genre_ids'):
+                for i in range(len(genres)):
+                    if n == genres[i].get('id'):
+                        names.append(genres[i].get('name'))
+
+        # for m in range(len(movies)):
+        #     for n in range(len(movies[m].get('genre_ids'))):
+        #         for g in range(len(genres)):
+        #             if movies[m].get('genre_ids') == genres[g].get('id'):
+        #                 names.append(genres[g].get('name'))
+        return names
+
+    result = []
+    for i in range(len(movies)):
+        result.append({
+            'id' : movies[i].get('id'),
+            'title' : movies[i].get('title'),
+            'vote_average' : movies[i].get('vote_average'),
+            'overview' : movies[i].get('overview'),
+            'genre_names' : movie_return()
+        })
+        
+    return result 
         
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
@@ -25,6 +58,7 @@ if __name__ == '__main__':
     genres_json = open('data/genres.json', encoding='UTF8')
     genres_list = json.load(genres_json)
 
+    
     pprint(movie_info(movies_list, genres_list))
 
 

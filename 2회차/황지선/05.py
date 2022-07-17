@@ -18,8 +18,8 @@ from pprint import pprint
 
 def movie_info(movie, genres): 
     # 여기에 코드를 작성합니다.
-    # 포문을 이중으로 쌓아서... 
-
+    # 포문을 이중으로 쌓아서...
+ 
     def movie_return():
         names = []
         for m in movie.get('genre_ids'):
