@@ -18,15 +18,28 @@ from pprint import pprint
 
 def movie_info(movie, genres): 
     # 여기에 코드를 작성합니다.
+    # 포문을 이중으로 쌓아서...
+    # for 
+
+    def movie_return():
+        names = []
+        for m in movie.get('genre_ids'):
+            for g in range(len(genres)):
+                if m == genres[g].get('id'):
+                    names.append(genres[g].get('name'))
+        return names
+
     result = {
         'id' : movie.get('id'),
         'title' : movie.get('title'),
         'vote_average' : movie.get('vote_average'),
         'overview' : movie.get('overview'),
-        'genre_names' : genres_list([movie.get('genre_ids')]['id']) # movie.get('genre_ids') = 리스트 타입
+        'genre_names' : movie_return()
+        # 'genre_names' : movie.get('genre_ids') # movie.get('genre_ids') = 리스트 타입
     }
     return result
-        
+    pass
+
 
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
@@ -39,11 +52,11 @@ if __name__ == '__main__':
     pprint(movie_info(movie, genres_list))
 
 
-# print(movie)
-# print(genres_list)
+# pprint(movie)
+# pprint(genres_list)
 
 
-#     {'genre_names': ['Drama', 'Crime'],
+#  {'genre_names': ['Drama', 'Crime'],
 #  'id': 278,
 #  'overview': '촉망받는 은행 간부 앤디 듀프레인은 아내와 그녀의 정부를 살해했다는 누명을 쓴다. 주변의 증언과 살해 현장의 '
 #              '그럴듯한 증거들로 그는 종신형을 선고받고 악질범들만 수용한다는 지옥같은 교도소 쇼생크로 향한다. 인간 말종 '
@@ -52,3 +65,11 @@ if __name__ == '__main__':
 #              '이리저리 부리면서 검은 돈을 긁어 모으고 앤디는 이 돈을 세탁하여 불려주면서 그의 돈을 관리하는데...',
 #  'title': '쇼생크 탈출',
 #  'vote_average': 8.7}
+
+
+# def movie_info(movies, genres):
+#     for movie in movies:
+#         genre_names = []
+#         for i in range(len(movie.get('genre_ids'))):
+#             for ii in range(len(genres)):
+#                 if movie.get('genre_ids')[i] == genres[ii].get('id'):
