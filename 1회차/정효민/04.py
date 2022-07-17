@@ -4,7 +4,12 @@ from pprint import pprint
 
 def movie_info(movie):
     pass 
-    # 여기에 코드를 작성합니다.    
+    # 여기에 코드를 작성합니다.
+    f = open('data/movie.json' , 'r' , encoding= 'utf-8')
+    w = json.load(f)
+    print(w)  
+    
+     
 
 
 # 아래의 코드는 수정하지 않습니다.

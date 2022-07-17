@@ -1,10 +1,19 @@
 import json
 from pprint import pprint
+from unittest import result
 
 
 def movie_info(movie, genres):
     pass 
-    # 여기에 코드를 작성합니다.  
+    # 여기에 코드를 작성합니다.
+    f = open('data/movies.json' , 'r' , encoding='utf-8')
+    y = open('data/genres.json' , 'r' , encoding='utf-8')
+    z = json.load(y)
+    x = json.load(f)
+    
+    result = {
+        'genres' : samsung.get('genres' ,)
+    }
         
 
 # 아래의 코드는 수정하지 않습니다.
