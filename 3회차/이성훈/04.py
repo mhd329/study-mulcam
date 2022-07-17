@@ -14,11 +14,13 @@ from pprint import pprint
 def movie_info(movie):
 
     # 여기에 코드를 작성합니다.    
-    for key in movie.keys():
-        if key == 'id, title, vote_average, overview, genre_ids':
-            print(key)
-    for value in movie.values():
-        print(value)
+    movie2 = {}
+    movie2['genre_ids'] = movie['genre_ids']
+    movie2['id'] = movie['id']
+    movie2['overview'] = movie['overview']
+    movie2['title'] = movie['title']
+    movie2['vote_average'] = movie['vote_average']
+    return movie2
 
 
 # 아래의 코드는 수정하지 않습니다.
