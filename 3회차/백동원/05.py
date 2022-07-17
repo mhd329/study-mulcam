@@ -5,23 +5,22 @@ from pprint import pprint
 def movie_info(movie, genres):
    
     f = open('data/movie.json', 'r', encoding = 'utf-8')
-    g = json.load(f)
+    movieinfo = json.load(f)
     h = open('data/genres.json', 'r', encoding = 'utf-8')
-    i = json.load(h)
-    # print(i, type(i))
+    genreinfo = json.load(h)
+    
     genre_group = []
-    for genre_name in g.get('genre_ids'):
-        for a in i:
-            for genre_code in a:
-                if genre_name == a[genre_code]:
-                    genre_group.append(a['name'])
+    for genre_name in movieinfo.get('genre_ids'):
+        for a in genreinfo:
+            if a['id'] == genre_name:
+                genre_group.append(a['name'])
     
     result = {
         'genre_ids' : genre_group,
-        'id' : g.get('id'),
-        'overview' : g.get('overview'),
-        'title' : g.get('title'),
-        'vote_average' : g.get('vote_average')
+        'id' : movieinfo.get('id'),
+        'overview' : movieinfo.get('overview'),
+        'title' : movieinfo.get('title'),
+        'vote_average' : movieinfo.get('vote_average')
     }
     pprint(result)
     pass 
