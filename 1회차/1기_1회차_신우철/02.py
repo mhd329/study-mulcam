@@ -1,12 +1,18 @@
 with open('data/fruits.txt','r',encoding='utf-8') as f:
-    count = 0
-    while True:
-        if f.readline()=='':
-            break
-        count += 1
-    print(count)
-with open('data/fruits.txt','w',encoding='utf-8') as f:
-    for i in f:
-        if i == 'berry':
     
-            print(i)
+    count = 0
+    f = set(f)
+    
+
+    for line in f:
+        
+        words=line.split('\n')
+            
+        for word in words:
+            
+            if 'berry' in word:
+                if word.endswith('berry'):
+                    count += 1
+                    print(word)
+                
+print(count)

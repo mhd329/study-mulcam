@@ -3,7 +3,22 @@ from pprint import pprint
 
 
 def movie_info(movie, genres):
-    pass 
+    movie_data = {}
+    name= {}
+    for i in genres :
+        name[i['id']] = i['name']
+
+    names = []
+    for j in movie['genre_ids'] :
+        names.append(name[j])
+
+    
+    movie_data['genre_name'] = names
+    movie_data['id'] = movie['id']
+    movie_data['overview'] = movie['overview']
+    movie_data['title'] = movie['title']
+    movie_data['vote_average'] = movie['vote_average']
+    return movie_data
     # 여기에 코드를 작성합니다.  
         
 
