@@ -25,10 +25,10 @@ def movie_info(movies, genres):
 
         info.append(first)
 
-    return info
+        return print(info)
 
 
-    # 아래의 문제, genre_names에 장르 이름 하나밖에 안 나온다
+    # 밑의 문제는 장르가 하나씩 밖에 반환이 안 된다
 
     # info = []
     # genre_names = []
