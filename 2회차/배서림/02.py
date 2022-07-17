@@ -1,3 +1,7 @@
+# 과일 데이터 `fruits.txt`를 활용하여 `berry`로 끝나는 과일의 갯수와 목록을 `02.txt`  에 기록하시오.
+# 과일은 하나당 한 줄에 기록되어 있습니다.
+
+
 with open('data/fruits.txt', 'r', encoding = 'utf-8') as f: # f란 이름으로 fruits.txt를 읽기 전용으로 열 건데
     text = f.read() # 이 문자열(==text) 안의
     noblank = text.replace(' ', '') # 공백을 지우고(==noblank)
@@ -13,4 +17,26 @@ with open('data/fruits.txt', 'r', encoding = 'utf-8') as f: # f란 이름으로 
              cnt += 1 # 1) 수를 더해서
              li.append(fruit) # 2) 리스트에 따로 모아서
     print(cnt) # 1) cnt의 값을 출력함
-    print('\n'.join(li)) # 2) li의 값을 출력함
+    print('\n'.join(li)) # 2) li의 값을 출력함 (join 메서드==리스트를 문자열로 합쳐서 반환)
+
+
+# output
+# 18
+# Huckleberry
+# Honeyberry
+# Boysenberry
+# Bilberry
+# Raspberry
+# Strawberry
+# Gojiberry
+# Salalberry
+# Salmonberry
+# Cranberry
+# Gooseberry
+# Cloudberry
+# Juniperberry
+# Marionberry
+# Blueberry
+# Mulberry
+# Blackberry
+# Elderberry
