@@ -4,6 +4,27 @@ from pprint import pprint
 
 def movie_info(movies, genres):
     pass 
+
+    movie_result = []
+
+    for a in movies:
+        for num in a.get('genre_ids'):
+            for i in genres:
+                if num == i.get('id'):
+                    genre_names = []
+                    genre_names.append(i.get('name'))
+
+            result = {
+            'genre_names' : genre_names,
+            'id' : a.get('id'),
+            'overview' : a.get('overview'),
+            'title' : a.get('title'),
+            'vote_average' : a.get('vote_average')
+
+            }
+            movie_result.append(result)
+            
+    return movie_result
     # 여기에 코드를 작성합니다.  
         
         
