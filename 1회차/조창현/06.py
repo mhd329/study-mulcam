@@ -5,7 +5,27 @@ from pprint import pprint
 def movie_info(movies, genres):
     pass 
     # 여기에 코드를 작성합니다.  
-        
+    
+    for movie in movies:
+        g_names = []
+
+        for id in movie.get('genre_ids'):
+            for a in genres:
+                if a['id'] == id:
+
+                    g_names.append(a.get('name'))
+
+        mine = {
+            'genre_names' : g_names,
+            'id' : movie.get('id'),
+            'overview' : movie.get('overview'),
+            'poster_path' : movie.get('poster_path'),
+            'title' : movie.get('title'),
+            'vote_average' : movie.get('vote_average')
+            }
+        for i, j in mine.items():
+            print('{} : {}'.format(i, j))
+    
         
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
