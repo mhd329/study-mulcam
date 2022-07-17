@@ -30,6 +30,9 @@ def movie_info(movies, genres):
          temp['title'] = d['title']
          temp['vote_average'] = d['vote_average']
          result.append(temp)
+    #7월 17일
+    #평점순 내림차순 정렬 추가
+    result.sort(key=lambda x: x['vote_average'], reverse= True)
     return result
 
 
