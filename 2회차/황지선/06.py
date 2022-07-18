@@ -19,33 +19,51 @@ from pprint import pprint
 
 
 def movie_info(movies, genres):
-
-    def movie_return():
+    mov = []
+    for m in movies:
         names = []
-        for m in range(len(movies)):
-            for n in movies[m].get('genre_ids'):
-                for i in range(len(genres)):
-                    if n == genres[i].get('id'):
-                        names.append(genres[i].get('name'))
+        for i in m['genre_ids']:
+            for j in genres:
+                if i == j['id']:
+                    names.append(j['name'])
 
-        # for m in range(len(movies)):
-        #     for n in range(len(movies[m].get('genre_ids'))):
-        #         for g in range(len(genres)):
-        #             if movies[m].get('genre_ids') == genres[g].get('id'):
-        #                 names.append(genres[g].get('name'))
-        return names
+        result = {'genre_names': names,
+                'id': m.get('id'),
+                'overview': m.get('overview'),
+                'titile': m.get('title'),
+                'vote_average': m.get('vote_average')}
+        mov.append(result)
+    return mov
 
-    result = []
-    for i in range(len(movies)):
-        result.append({
-            'id' : movies[i].get('id'),
-            'title' : movies[i].get('title'),
-            'vote_average' : movies[i].get('vote_average'),
-            'overview' : movies[i].get('overview'),
-            'genre_names' : movie_return()
-        })
+
+# def movie_info(movies, genres):
+
+#     def movie_return():
+#         names = []
+#         for m in range(len(movies)):
+#             for n in movies[m].get('genre_ids'):
+#                 for i in range(len(genres)):
+#                     if n == genres[i].get('id'):
+#                         names.append(genres[i].get('name'))
+
+#         # for m in range(len(movies)):
+#         #     for n in range(len(movies[m].get('genre_ids'))):
+#         #         for g in range(len(genres)):
+#         #             if movies[m].get('genre_ids') == genres[g].get('id'):
+#         #                 names.append(genres[g].get('name'))
+#         return names
+
+#     result = []
+#     for i in range(len(movies)):
+#         result.append({
+#             'id' : movies[i].get('id'),
+#             'title' : movies[i].get('title'),
+#             'vote_average' : movies[i].get('vote_average'),
+#             'overview' : movies[i].get('overview'),
+#             'genre_names' : movie_return()
+#         })
         
-    return result 
+#     return result 
         
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
