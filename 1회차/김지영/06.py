@@ -49,6 +49,8 @@ def movie_info(movies, genres):
         movie_list.append(result)
     # 리스트 movies의 요소를 읽은 result를 모아둔 리스트를 반환합니다.
     return movie_list
+    # https://github.com/kimbap918/01-PJT-01/blob/master/2%ED%9A%8C%EC%B0%A8/%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%AE%E1%86%AB%E1%84%92%E1%85%A7%E1%86%A8/06.py
+    # 좋은 코드 공부하기. 깔끔대장 신기
         
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
