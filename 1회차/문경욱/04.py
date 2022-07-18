@@ -3,13 +3,15 @@ from pprint import pprint
 
 
 def movie_info(movie):
-    info_dict = {}
     movie_ids = movie['genre_ids']
     movie_id = movie['id']
     movie_overview = movie['overview']
     movie_title = movie['title']
     movie_average = movie['vote_average']
 
+
+
+    info_dict = {}
     info_dict['genre_ids'] = movie_ids
     info_dict['id'] = movie_id
     info_dict['overview'] = movie_overview
