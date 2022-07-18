@@ -19,12 +19,9 @@ from pprint import pprint
 
 
 def movie_info(movies, genres):
-    
-    result = []
 
     def movie_return():
         names = []
-
         for m in range(len(movies)):
             for n in movies[m].get('genre_ids'):
                 for i in range(len(genres)):
