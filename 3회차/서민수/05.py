@@ -4,8 +4,10 @@ from pprint import pprint
 
 def movie_info(movie, genres):
     pass 
-    # 여기에 코드를 작성합니다.  
-        
+    for id in genres:
+        for a in genres:
+            if a['id'] == id:
+                print(id)
 
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
