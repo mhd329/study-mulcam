@@ -2,17 +2,11 @@ import json
 from pprint import pprint
 
 
-def movie_info(movies, genres):
+def movie_info1(movies, genres):
+    unness_info=["adult","backdrop_path","original_language","original_title","popularity","poster_path","release_date","video","vote_count"]
     for i in range(len(movies)):
-        del movies[i]["adult"]
-        del movies[i]["backdrop_path"]
-        del movies[i]["original_language"]
-        del movies[i]["original_title"]
-        del movies[i]["popularity"]
-        del movies[i]["poster_path"]
-        del movies[i]["release_date"]
-        del movies[i]["video"]
-        del movies[i]["vote_count"]
+        for j in unness_info:
+            del movies[i][j]
         movies[i]["genre_names"]=[]
         for j in range(len(movies[i]["genre_ids"])):
             for k in range(len(genres)): 
@@ -21,9 +15,8 @@ def movie_info(movies, genres):
         del movies[i]["genre_ids"]
 
 
-    return movies  
-    # 여기에 코드를 작성합니다.  
-        
+    return movies   
+
         
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':

@@ -3,15 +3,9 @@ from pprint import pprint
 
 
 def movie_info(movie, genres):
-    del movie["adult"]
-    del movie["backdrop_path"]
-    del movie["original_language"]
-    del movie["original_title"]
-    del movie["popularity"]
-    del movie["poster_path"]
-    del movie["release_date"]
-    del movie["video"]
-    del movie["vote_count"]
+    unness_info=["adult","backdrop_path","original_language","original_title","popularity","poster_path","release_date","video","vote_count"]
+    for i in unness_info:
+        del movie[i]
     for i in range(len(genres)):
         if genres[i]["id"]==movie["genre_ids"][0]:
             movie["genre_ids"][0]=genres[i]["name"]
