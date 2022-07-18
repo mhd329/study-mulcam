@@ -3,14 +3,14 @@ from pprint import pprint
 
 
 def movie_info(movies, genres):
-    mov_list = []
+    
+    new_list = []
     for movie in movies:
+        mov_list = []
         for a in genres_list:
-            print(a)
             if a.get('id') in movie.get('genre_ids'):
                 mov_list.append(a.get('name'))
-                
-        
+            
                 result = {
         'genre_names' :mov_list,
         'id' : movie.get('id'),
@@ -18,6 +18,8 @@ def movie_info(movies, genres):
         'title' : movie.get('title'),
         'vote_average' :movie.get('vote_average')
         }
+        new_list.append(result)
+    return new_list
     
     
 

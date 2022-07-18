@@ -7,15 +7,14 @@ def movie_info(movie, genres):
     for a in genres_list:
         if a.get('id') in movie.get('genre_ids'):
           mov_list.append(a.get('name'))
-        
-    return {
+          result = {
         'genre_names' :mov_list,
         'id' : movie.get('id'),
-        "overview" : movie.get('overview'),
+        'overview' : movie.get('overview'),
         'title' : movie.get('title'),
         'vote_average' :movie.get('vote_average')
-
-    }
+        }
+    return result
         
 
 # 아래의 코드는 수정하지 않습니다.
