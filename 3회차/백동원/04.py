@@ -4,6 +4,16 @@ from pprint import pprint
 
 def movie_info(movie):
     pass 
+    f = open('data/movie.json', 'r', encoding = 'utf-8')
+    g = json.load(f)
+    result = {
+        'genre_ids' : g.get('genre_ids'),
+        'id' : g.get('id'),
+        'overview' : g.get('overview'),
+        'title' : g.get('title'),
+        'vote_average' : g.get('vote_average')
+    }
+    pprint(result)
     # 여기에 코드를 작성합니다.    
 
 
