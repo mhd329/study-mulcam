@@ -1,0 +1,94 @@
+Yuzu 10 
+Currant 2 
+Bilberry 4 
+Boysenberry 3 
+Miracle fruit 9 
+Cantaloupe 6 
+Cranberry 4 
+Mandarine 7 
+Blueberry 4 
+Purple mangosteen 2 
+Longan 4 
+Soursop 1 
+Lychee 4 
+Damson 2 
+Blood orange 1 
+Honeyberry 4 
+Kiwifruit 1 
+Redcurrant 9 
+Guava 4 
+Loquat 11 
+Grape 2 
+Cherry 7 
+Rambutan 2 
+Blackberry 4 
+Mulberry 2 
+Salak 12 
+Apricot 3 
+Cherimoya 7 
+Prune 3 
+Plumcot 8 
+Blackcurrant 4 
+Huckleberry 2 
+Chico fruit 2 
+Papaya 5 
+Pineapple 2 
+Fig 4 
+Banana 2 
+Satsuma 3 
+Mangosteen 4 
+Pear 5 
+Raisin 3 
+Pomegranate 4 
+Tamarillo 6 
+Star fruit 1 
+Tamarind 4 
+Raspberry 4 
+berryfake 1 
+Strawberry 3 
+Tangerine 4 
+Quince 2 
+Kiwano 5 
+Lime 4 
+Orange 1 
+Melon 1 
+Custard apple 4 
+Cucumber 15 
+Jabuticaba 8 
+Persimmon 1 
+Peach 1 
+Kumquat 7 
+Date 9 
+Pomelo 7 
+Honeydew 9 
+Elderberry 1 
+Olive 7 
+Jujube 1 
+Solanum quitoense 8 
+Mango 6 
+Jackfruit 12 
+Clementine 2 
+Durian 2 
+Lemon 10 
+Jambul 4 
+Grapefruit 1 
+Salal berry 4 
+Ugli fruit 4 
+Cloudberry 5 
+Goji berry 2 
+Plum 2 
+Watermelon 1 
+Avocado 1 
+Marionberry 3 
+Apple 3 
+Plantain 6 
+Nance 1 
+Juniper berry 5 
+Nectarine 1 
+Physalis 2 
+Feijoa 8 
+Gooseberry 3 
+Passionfruit 2 
+Coconut 2 
+Dragonfruit 3 
+Salmonberry 3 
