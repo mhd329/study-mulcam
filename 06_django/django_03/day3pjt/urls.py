@@ -15,11 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from practices import views
+import practices.views
+import appp.views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('index/', views.index),
-    path('ping/', views.ping),
-    path('pong/', views.pong),
+    path("admin/", admin.site.urls),
+    path("index/", practices.views.index),
+    path("ping/", practices.views.ping),
+    path("pong/", practices.views.pong),
+    path("", appp.views.index),
+    path("number/<int:_number>", appp.views.print_number),
+    path("print-text/", appp.views.print_text),
 ]
