@@ -1,2 +1,0 @@
-
-    pprint (result)            

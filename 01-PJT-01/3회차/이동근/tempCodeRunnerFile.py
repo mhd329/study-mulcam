@@ -1,1 +1,0 @@
-req.append(["genre_names"])

@@ -1,6 +1,0 @@
-f = open("/Users/imac01/Desktop/multicampus/01-PJT-01/3회차/김태형/data/fruits.txt",'r')
-fruit_list = f.readlines()
-fruit_list_l = list((fruit_list))
-f02 = open("/Users/imac01/Desktop/multicampus/01-PJT-01/3회차/김태형/01.txt",'w')
-f02.write(str(len(fruit_list_l)))
-f02.close()
